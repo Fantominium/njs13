@@ -5,14 +5,24 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
-    },
-  },
-  plugins: [],
+  daisyui:
+  {
+    themes: ["light", "dark", "coffee",{
+      mytheme: {
+        "primary": "#a6fcdc",
+        "secondary": "#f9dd75",
+        "accent": "#37c697",
+        "neutral": "#291d34",
+        "base-100": "#38455c",
+        "info": "#7cc3f3",
+        "success": "#0d733c",
+        "warning": "#f4d32f",
+        "error": "#e33566",
+      }
+    }],
+},
+  plugins: [    
+    require ("@tailwindcss/typography"),
+    require("daisyui")
+  ],
 }
