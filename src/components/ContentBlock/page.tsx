@@ -7,7 +7,7 @@ type Props = {
 
 const ContentBlock = ({ children }: Props) => {
   return (
-    <div className='md:container md:mx-auto h-screen px-1.5'>{children}</div>
+    <div className='md:container md:mx-auto px-1.5'>{children}</div>
   )
 }
 
