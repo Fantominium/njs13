@@ -59,8 +59,8 @@ export default function ModalButton() {
                   </Dialog.Title>
                   <div className="mt-2 ">
                     <p className="text-sm text-primary">
-                    <input type="text" placeholder="Type here" className="input input-bordered input-accent w-full max-w-xs my-2" />
-                    <input type="text" placeholder="Type here" className="input input-bordered input-accent w-full max-w-xs my-2" />
+                    <input type="text" placeholder="Email" aria-label='Email field' className="input input-bordered input-accent w-full max-w-xs my-2" />
+                    <input type="text" placeholder="Name" aria-label='Name field' className="input input-bordered input-accent w-full max-w-xs my-2" />
                     </p>
                   </div>
 
