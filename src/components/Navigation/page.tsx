@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import ModalButton from '../ModalButton/page'
 
 type Props = {}
 
@@ -41,7 +42,7 @@ const Navigation = (props: Props) => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    <ModalButton/>
   </div>
 </div>
   )
