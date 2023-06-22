@@ -2,14 +2,34 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import { getUser } from '@/molecules/Login/page'
+
+type Props = {
+  name: string,
+  email:string,
+}
+
 export default function ModalButton() {
   let [isOpen, setIsOpen] = useState(false)
-
-  function closeModal() {
-    getUser();
-    setIsOpen(false)
+  const [loginData, setLoginData] = useState({
+    name:"",
+    email:"",
+  });
+  const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
+    const {name, value} = e.target;
+    setLoginData((prev)=>{
+      return{...prev,[name]: value}
+    })
   }
 
+  function closeModal() {
+    // getUser();
+    setIsOpen(false)
+  }
+  const handleSubmit = () => {
+    console.log(loginData);
+
+    closeModal();
+  }
   function openModal() {
     setIsOpen(true)
   }
@@ -60,8 +80,12 @@ export default function ModalButton() {
                   </Dialog.Title>
                   <div className="mt-2 ">
                     <p className="text-sm text-primary">
-                    <input type="text" placeholder="Email" aria-label='Email field' className="input input-bordered input-accent w-full max-w-xs my-2" />
-                    <input type="text" placeholder="Name" aria-label='Name field' className="input input-bordered input-accent w-full max-w-xs my-2" />
+                    <input type="text" name="email" placeholder="Email" aria-label='Email field' 
+                    onChange={handleChange}
+                    className="input input-bordered input-accent w-full max-w-xs my-2" />
+                    <input type="text" name="name" placeholder="Name" aria-label='Name field'
+                    onChange={handleChange}
+                    className="input input-bordered input-accent w-full max-w-xs my-2" />
                     </p>
                   </div>
 
@@ -69,7 +93,7 @@ export default function ModalButton() {
                     <button
                       type="button"
                       className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                      onClick={closeModal}
+                      onClick={()=> handleSubmit()}
                     >
                       Login
                     </button>
