@@ -22,11 +22,11 @@ export default function ModalButton() {
   }
 
   function closeModal() {
-    // getUser();
     setIsOpen(false)
   }
   const handleSubmit = () => {
     console.log(loginData);
+    getUser(loginData);
 
     closeModal();
   }
