@@ -1,7 +1,7 @@
 "use client"
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
-import { getUser } from '@/molecules/Login/page'
+// import { getUser } from '@/molecules/Login/page'
 
 type Props = {
   name: string,
@@ -26,7 +26,7 @@ export default function ModalButton() {
   }
   const handleSubmit = () => {
     console.log(loginData);
-    getUser(loginData);
+    // getUser(loginData);
 
     closeModal();
   }
