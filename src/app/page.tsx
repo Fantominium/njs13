@@ -1,8 +1,7 @@
 import Centre2x2ContentBlock from '@/components/Centre2x2ContentBlock/page'
 import ContentBlock from '@/components/ContentBlock/page'
 import StickyProductContentBlock from '@/components/StickyProductContentBlock/page'
-import Image from 'next/image'
-import Form from './Form/page'
+
 
 export default function Home() {
   return (
