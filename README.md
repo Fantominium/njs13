@@ -35,4 +35,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 
 ### Where I Left off 08/08/23:
-https://thoughtrealm.medium.com/setting-up-a-graphql-server-in-next-js-13-bc7382be6fdb
+https://javascript.plainenglish.io/using-apollo-server-with-nextjs-13-app-dir-part-1-google-auth-with-nextauth-prisma-ca242c92599e

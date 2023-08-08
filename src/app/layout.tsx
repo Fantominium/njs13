@@ -23,9 +23,7 @@ export default async function RootLayout({
     <html lang="en" data-theme="emerald">
       <body className={inter.className}>
       <Navigation/>
-      <ApolloWrapper>
         {children}
-        </ApolloWrapper>
         <Footer/>
         </body>
     </html>
