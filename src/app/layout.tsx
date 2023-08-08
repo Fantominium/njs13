@@ -1,6 +1,7 @@
 import Navigation from '@/components/Navigation/page'
 import { getClient } from "@/lib/client";
 import { gql } from "@apollo/client";
+import { ApolloWrapper } from '@/lib/apollo-provider';
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Footer from '@/components/Footer/page'
@@ -29,8 +30,9 @@ export default async function RootLayout({
     <html lang="en" data-theme="myTheme">
       <body className={inter.className}>
       <Navigation/>
-      
+      <ApolloWrapper>
         {children}
+        </ApolloWrapper>
         <Footer/>
         </body>
     </html>
