@@ -8,7 +8,7 @@ type Props = {
   email:string,
 }
 
-export default function Login (props ?: Props) {
+export default function useLogin (props ?: Props) {
   const {data} = useSuspenseQuery(GET_USERS);
   console.log(data, " data from get user query");
   

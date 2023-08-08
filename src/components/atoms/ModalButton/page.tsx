@@ -1,7 +1,7 @@
 "use client"
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
-// import { getUser } from '@/molecules/Login/page'
+import  Login  from '@/components/molecules/Login/page'
 
 type Props = {
   name: string,

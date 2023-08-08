@@ -1,6 +1,6 @@
-import Centre2x2ContentBlock from '@/components/Centre2x2ContentBlock/page'
-import ContentBlock from '@/components/ContentBlock/page'
-import StickyProductContentBlock from '@/components/StickyProductContentBlock/page'
+import Centre2x2ContentBlock from '@/components/atoms/Centre2x2ContentBlock/page'
+import ContentBlock from '@/components/atoms/ContentBlock/page'
+import StickyProductContentBlock from '@/components/atoms/StickyProductContentBlock/page'
 
 
 export default function Home() {

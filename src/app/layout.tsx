@@ -1,10 +1,10 @@
-import Navigation from '@/components/Navigation/page'
+import Navigation from '@/components/atoms/Navigation/page'
 import { getClient } from "@/lib/client";
 import { gql } from "@apollo/client";
 import { ApolloWrapper } from '@/lib/apollo-provider';
 import './globals.css'
 import { Inter } from 'next/font/google'
-import Footer from '@/components/Footer/page'
+import Footer from '@/components/atoms/Footer/page'
 
 const inter = Inter({ subsets: ['latin'] })
 export const revalidate = 5;

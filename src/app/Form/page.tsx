@@ -1,4 +1,4 @@
-import ContentBlock from '@/components/ContentBlock/page'
+import ContentBlock from '@/components/atoms/ContentBlock/page'
 import React from 'react'
 
 type Props = {}
