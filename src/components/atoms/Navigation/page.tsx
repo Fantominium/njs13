@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import ModalButton from '../ModalButton/page'
+import LoginModal from '@/components/organisms/LoginModal/page'
 
 type Props = {}
 
@@ -42,7 +42,7 @@ const Navigation = (props: Props) => {
     </ul>
   </div>
   <div className="navbar-end">
-    <ModalButton/>
+    <LoginModal/>
   </div>
 </div>
   )

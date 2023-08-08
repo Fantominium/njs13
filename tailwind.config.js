@@ -7,17 +7,9 @@ module.exports = {
   ],
   daisyui:
   {
-    themes: ["light", "dark", "coffee", "winter", {
+    themes: ["light", "dark", "coffee", "winter", "retro", "luxury", "emerald",  {
       mytheme: {
-        "primary": "#a6fcdc",
-        "secondary": "#f9dd75",
-        "accent": "#37c697",
-        "neutral": "#291d34",
-        "base-100": "#38455c",
-        "info": "#7cc3f3",
-        "success": "#0d733c",
-        "warning": "#f4d32f",
-        "error": "#e33566",
+
       }
     }],
 },
