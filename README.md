@@ -34,5 +34,5 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 
-### Where I Left off 07/08/23:
-https://www.apollographql.com/blog/apollo-client/next-js/how-to-use-apollo-client-with-next-js-13/
+### Where I Left off 08/08/23:
+https://thoughtrealm.medium.com/setting-up-a-graphql-server-in-next-js-13-bc7382be6fdb
