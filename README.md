@@ -36,3 +36,47 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ### Where I Left off 16/08/23:
 https://next-auth.js.org/getting-started/example
+
+
+### 11/09/2023 - openssl installed, need to run for next auth key
+https://next-auth.js.org/configuration/options#json-web-token-options 
+## NOTE: - we want session vars not tokens
+
+### - playuground for google oauth:
+https://developers.google.com/oauthplayground/
+
+### - Apple is a faff and needs more time to digest, kiss me ass 
+## - github: 
+   1 https://github.com/login/oauth/authorize - endpoint - GET (for application)
+    Params {
+        client_id - string
+        redirect_uri - string
+        state - string
+    }
+    2 Give code to POST https://github.com/login/oauth/access_token (for users)
+        with the params (all strings ){
+            client_id
+            client_secret
+            code
+            redirect_uri
+            
+        }
+    3 On behalf of user: 
+        Authorization: Bearer OAUTH-TOKEN
+        GET https://api.github.com/user
+
+## - twitch
+    1 Register the app here 1st https://dev.twitch.tv/docs/authentication/register-app/
+    2 After reg get token - instructions here: https://dev.twitch.tv/docs/authentication/getting-tokens-oauth/
+    3 Implicit grant flow is the one we use - from here: https://dev.twitch.tv/docs/authentication/getting-tokens-oauth/#implicit-grant-flow
+## - twitter
+    NOT WORTH IT
+    Horrible dev api, and sluggish, outdated oauth (1.0 by default and requires opt in for oauth 2)
+
+## - discord (pretty standard)
+    1 Register app here : https://discord.com/developers/applications
+    # NB: No app.json accepted here:
+    **In accordance with the relevant RFCs, the token and token revocation URLs will only accept a content type of application/x-www-form-urlencoded. JSON content is not permitted and will return an error.**
+    2 <state> value is recommended for transactions with endpoint, not mandatory, but heavily recommended
+    3 implicit grant here : https://discord.com/developers/docs/topics/oauth2#implicit-grant
+    3.a (optional) https://discord.com/developers/docs/topics/oauth2#client-credentials-grant - more secure

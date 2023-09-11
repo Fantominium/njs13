@@ -20,7 +20,7 @@ export default async function RootLayout({
 }) {
 
   return (
-    <html lang="en" data-theme="emerald">
+    <html lang="en" data-theme="dark">
       <body className={inter.className}>
       <Navigation/>
       <ApolloWrapper>
