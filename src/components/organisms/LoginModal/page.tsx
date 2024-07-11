@@ -43,7 +43,7 @@ export default function LoginModal() {
         </button>
       </div>
 
-      <Transition appear show={isOpen} as={Fragment}>
+      <Transition appear show={isOpen} as={Fragment} >
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
             as={Fragment}
@@ -79,10 +79,8 @@ export default function LoginModal() {
                     <p className="text-sm text-primary">
                     <input type="text" name="email" placeholder="Email" aria-label='Email field' 
                     onChange={handleChange}
-                    className="input input-bordered input-accent w-full max-w-xs my-2" />
-                    <input type="text" name="name" placeholder="Name" aria-label='Name field'
-                    onChange={handleChange}
-                    className="input input-bordered input-accent w-full max-w-xs my-2" />
+                    className="input input-bordered input-accent text-black-100 w-full max-w-xs my-2" />
+                   
                     </p>
                   </div>
 
