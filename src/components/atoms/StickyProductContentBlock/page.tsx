@@ -1,11 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from 'next/image'
 import React from 'react'
+import orchid from '../../../img/orchid-2400542_1280.jpg'
+import BookingList from '@/components/molecules/Bookings/BookingsList';
 
-type Props = {}
 
-const StickyProductContentBlock = (props: Props) => {
+
+const StickyProductContentBlock = async () => {
   return (
+
     <div className="relative isolate overflow-hidden bg-base-100/60 px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
     <div className="absolute inset-0 -z-10 overflow-hidden">
       <svg
@@ -39,6 +42,7 @@ const StickyProductContentBlock = (props: Props) => {
           <div className="lg:max-w-lg">
             <p className="text-base font-semibold leading-7 text-indigo-600">Deploy faster</p>
             <h1 className="mt-2 text-3xl font-bold tracking-tight text-primary sm:text-4xl">A better workflow</h1>
+ 
             <p className="mt-6 text-xl leading-8 text-accent">
               Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi, nibh dui, diam
               eget aliquam. Quisque id at vitae feugiat egestas.
@@ -47,9 +51,9 @@ const StickyProductContentBlock = (props: Props) => {
         </div>
       </div>
       <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-        <img
+        <Image
           className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
-          src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+          src={orchid}
           alt=""
       
           
@@ -64,7 +68,7 @@ const StickyProductContentBlock = (props: Props) => {
               erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris
               semper sed amet vitae sed turpis id.
             </p>
-            <ul role="list" className="mt-8 space-y-8 text-base-content">
+            {/* <ul role="list" className="mt-8 space-y-8 text-base-content">
               <li className="flex gap-x-3">
                 <span>
                   <strong className="font-semibold text-primary">Push to deploy.</strong> Lorem ipsum, dolor sit amet
@@ -84,12 +88,15 @@ const StickyProductContentBlock = (props: Props) => {
                   vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
                 </span>
               </li>
-            </ul>
-            <p className="mt-8">
+            </ul> */}
+            <div className="mt-6 text-xl leading-8 text-accent">
+              <BookingList/>
+            </div>
+            {/* <p className="mt-8">
               Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor
               fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac
               adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
-            </p>
+            </p> */}
             <h2 className="mt-16 text-2xl font-bold tracking-tight text-primary">No server? No problem.</h2>
             <p className="mt-6">
               Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat in. Convallis arcu ipsum urna nibh.
