@@ -28,7 +28,7 @@ const Navigation = (props: Props) => {
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><a href='/Form'>Form</a></li>
+      <li><a href='/RegistrationForm'>Register</a></li>
       <li tabIndex={0}>
         <details>
           <summary>Parent</summary>

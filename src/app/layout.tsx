@@ -3,6 +3,8 @@ import { ApolloWrapper } from '@/lib/apollo-provider';
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Footer from '@/components/atoms/Footer/page'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const inter = Inter({ subsets: ['latin'] })
 export const revalidate = 5;
@@ -23,9 +25,10 @@ export default async function RootLayout({
     <html lang="en" data-theme="mytheme">
       <body className={inter.className}>
         <Navigation/>
-      <ApolloWrapper>
-        {children}
-        </ApolloWrapper>
+        <ToastContainer position="bottom-right" autoClose={5000} hideProgressBar={false} closeOnClick pauseOnHover draggable/>
+          <ApolloWrapper>
+            {children}
+          </ApolloWrapper>
         <Footer/>
         </body>
     </html>
